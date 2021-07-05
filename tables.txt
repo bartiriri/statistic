@@ -1,0 +1,25 @@
+#
+# Table for unique users
+#
+CREATE TABLE tx_statistic_user(
+    id int(11) auto_increment,
+    ip varchar(46) DEFAULT '0' NOT NULL,
+    sess_id varchar(255) DEFAULT '0' NOT NULL,
+    user_agent varchar(255) DEFAULT '0' NOT NULL,
+
+    PRIMARY KEY (id)
+)
+
+
+
+#
+# Table for logs
+#
+CREATE TABLE tx_statistic_log(
+    id int(11) auto_increment,
+    uid int(11) DEFAULT '0' NOT NULL,
+    url varchar(255) DEFAULT '0' NOT NULL,
+    tstamp int(11) DEFAULT '0' NOT NULL,
+
+    PRIMARY KEY (id)
+)
